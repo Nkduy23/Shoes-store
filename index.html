@@ -18,9 +18,10 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body style="height: 10000px">
+    <!-- Header -->
     <header class="header header--sticky">
       <div class="header__container">
-        <!-- Icon Menu -->
+        <!-- menu icon -->
         <div class="header__menu-icon">
           <input
             type="checkbox"
@@ -29,10 +30,10 @@
             class="menu-checkbox"
             hidden
           />
-          <label for="menu-checkbox"><i class="fa-solid fa-bars"></i></label>
-
           <!-- overlay -->
+          <label for="menu-checkbox"><i class="fa-solid fa-bars"></i></label>
           <label for="menu-checkbox" class="header__overlay"></label>
+
           <!-- menu content -->
           <div class="menu-drawer">
             <!-- menu top -->
@@ -56,10 +57,12 @@
             <ul id="header__nav-list--mobile"></ul>
           </div>
         </div>
-
+        <!-- logo -->
         <div class="header__logo">
           <a href="#!"><img src="assets/img/logo.png" alt="Logo" /></a>
         </div>
+
+        <!-- navigation pc -->
         <nav class="header__nav">
           <ul class="header__nav-list" id="header__nav-list--pc">
             <li class="header__nav-item"><a href="#!">Giày Nữ</a></li>
@@ -69,26 +72,118 @@
             <li class="header__nav-item"><a href="#!">Sale 50%</a></li>
           </ul>
         </nav>
+        <!-- search -->
         <div class="header__search">
           <input
             type="search"
             class="header__search-input"
             placeholder="Tìm kiếm"
           />
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <label for="search-checkbox">
+            <svg
+              class="header__search-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              />
+            </svg>
+          </label>
         </div>
+        <!-- header icon search -->
+        <div class="header__icon-search">
+          <input
+            type="checkbox"
+            id="search-checkbox"
+            name="search-checkbox"
+            class="search-checkbox"
+            hidden
+          />
+          <label for="search-checkbox" class="search__overlay"></label>
+
+          <!-- search content -->
+          <div class="search__drawer">
+            <input
+              type="search"
+              class="header__search-input"
+              placeholder="Tìm kiếm"
+            />
+            <label for="search-checkbox">
+              <svg
+                class="menu-drawer__close"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+              >
+                <path
+                  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                />
+              </svg>
+            </label>
+          </div>
+        </div>
+        <!-- actions -->
         <div class="header__actions">
-          <button class="header__action-btn btn btn--primary">
-            <i class="fa-solid fa-user"></i>
+          <button class="header__action-btn btn--primary">
+            <svg
+              class="header__action-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z"
+              />
+            </svg>
           </button>
-          <button class="header__action-btn btn btn--secondary">
-            <i class="fa-solid fa-cart-shopping"></i>
+          <button class="header__action-btn btn--secondary">
+            <svg
+              class="header__action-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+            >
+              <path
+                d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+              />
+            </svg>
           </button>
         </div>
       </div>
     </header>
+    <!-- Main -->
+    <div class="slider">
+      <div class="container-slider">
+        <div class="slider-image-list">
+          <a href="#!"
+            ><img
+              src="assets/img/banner-pc.jpg"
+              alt="seal"
+              class="slider-item__img"
+          /></a>
+          <a href="#!"
+            ><img
+              src="assets/img/banner-pc(1).jpg"
+              alt="seal"
+              class="slider-item__img"
+          /></a>
+          <a href="#!"
+            ><img
+              src="assets/img/banner-pc(2).jpg"
+              alt="seal"
+              class="slider-item__img"
+          /></a>
+        </div>
+        <div class="slider-controls">
+          <div class="btn-left btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="btn-right btn">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main></main>
   </body>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/slider.js"></script>
 </html>
-
-<!-- Đổi đơn vị lại thành rem hết nha và nhớ dùng cái clam gì đó để thay đổi kích thước theo màn hình -->
