@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Mulish", sans-serif;
+}
+
+/* Common */
+a {
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header__container {
+  width: 1400px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu-icon {
+  display: none;
+}
+
+.header__logo {
+  max-width: 12rem;
+}
+
+.header__logo img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header__nav .header__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  padding: 10px 0px;
+}
+
+.header__nav-item {
+  padding: 9px 12px;
+  font-size: 1.6rem;
+}
+
+.header__nav-item a {
+  color: #000000;
+  padding: 8px 12px;
+}
+
+.header__nav-item a:hover {
+  color: #110c0c;
+}
+
+.header__search {
+  position: relative;
+}
+
+.header__search .fa-magnifying-glass {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000;
+  cursor: pointer;
+}
+
+.header__search-input {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 15px 12px;
+  width: 200px;
+}
+
+.header__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.header__action-btn {
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.8rem;
+}
+
+.header__action-btn:hover {
+  color: #221b1b;
+}
+
+@media (max-width: 768px) {
+  /* Header */
+  .header__menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .header__search-input,
+  .header__nav {
+    display: none;
+    visibility: visible;
+  }
+
+  /* overlay */
+  .header__overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: ease 0.3s;
+  }
+
+  .menu-checkbox:checked ~ .header__overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-drawer {
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    padding: 20px;
+  }
+
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+    transition: ease 0.3s;
+  }
+
+  .menu-drawer__close {
+    width: 24px;
+  }
+
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #header__nav-list--mobile {
+    margin-top: 25px;
+  }
+
+  #header__nav-list--mobile .header__nav-item a {
+    display: block;
+  }
+}

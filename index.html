@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoe Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body style="height: 10000px">
+    <header class="header header--sticky">
+      <div class="header__container">
+        <!-- Icon Menu -->
+        <div class="header__menu-icon">
+          <input
+            type="checkbox"
+            name="menu-checkbox"
+            id="menu-checkbox"
+            class="menu-checkbox"
+            hidden
+          />
+          <label for="menu-checkbox"><i class="fa-solid fa-bars"></i></label>
+
+          <!-- overlay -->
+          <label for="menu-checkbox" class="header__overlay"></label>
+          <!-- menu content -->
+          <div class="menu-drawer">
+            <!-- menu top -->
+            <div class="menu-drawer__top">
+              <div class="header__logo">
+                <a href="#!"><img src="assets/img/logo.png" alt="Logo" /></a>
+              </div>
+              <label for="menu-checkbox">
+                <svg
+                  class="menu-drawer__close"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                >
+                  <path
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                  />
+                </svg>
+              </label>
+            </div>
+            <!-- navigation mobile -->
+            <ul id="header__nav-list--mobile"></ul>
+          </div>
+        </div>
+
+        <div class="header__logo">
+          <a href="#!"><img src="assets/img/logo.png" alt="Logo" /></a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list" id="header__nav-list--pc">
+            <li class="header__nav-item"><a href="#!">Giày Nữ</a></li>
+            <li class="header__nav-item"><a href="#!">Giày Nam</a></li>
+            <li class="header__nav-item"><a href="#!">Giày Cặp</a></li>
+            <li class="header__nav-item"><a href="#!">Túi</a></li>
+            <li class="header__nav-item"><a href="#!">Sale 50%</a></li>
+          </ul>
+        </nav>
+        <div class="header__search">
+          <input
+            type="search"
+            class="header__search-input"
+            placeholder="Tìm kiếm"
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="header__actions">
+          <button class="header__action-btn btn btn--primary">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <button class="header__action-btn btn btn--secondary">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+  </body>
+  <script src="assets/js/script.js"></script>
+</html>
+
+<!-- Đổi đơn vị lại thành rem hết nha và nhớ dùng cái clam gì đó để thay đổi kích thước theo màn hình -->
