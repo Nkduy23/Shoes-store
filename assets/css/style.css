@@ -138,7 +138,7 @@ a {
 }
 
 .slider-item {
-  max-width: 100%;
+  width: 100%;
   flex-shrink: 0;
   object-fit: cover;
   height: auto;
@@ -176,7 +176,7 @@ a {
 /* Responsive */
 
 @media (min-width: 768px) {
-  .header__search-input {
+  .search__drawer {
     display: none;
   }
 }
