@@ -1,15 +1,13 @@
 const listImage = document.querySelector(".slider-image-list");
-const imgs = document.querySelectorAll(".slider-item__img");
+const imgs = document.querySelectorAll(".slider-item"); 
 const btnLeft = document.querySelector(".btn-left");
 const btnRight = document.querySelector(".btn-right");
 const length = imgs.length;
 let current = 0;
 
-// Lấy chiều rộng của một hình ảnh
-const width = imgs[0].offsetWidth;
-
 // Hàm cập nhật slider
 function updateSlider() {
+  const width = imgs[0].offsetWidth; // Lấy chiều rộng mỗi lần cập nhật để đảm bảo tính linh hoạt
   listImage.style.transform = `translateX(${-width * current}px)`;
   listImage.style.transition = "transform 0.5s ease-in-out";
 }

@@ -21,7 +21,7 @@
     <!-- Header -->
     <header class="header header--sticky">
       <div class="header__container">
-        <!-- menu icon -->
+        <!-- menu icon mobile -->
         <div class="header__menu-icon">
           <input
             type="checkbox"
@@ -57,11 +57,10 @@
             <ul id="header__nav-list--mobile"></ul>
           </div>
         </div>
-        <!-- logo -->
+        <!-- logo pc -->
         <div class="header__logo">
           <a href="#!"><img src="assets/img/logo.png" alt="Logo" /></a>
         </div>
-
         <!-- navigation pc -->
         <nav class="header__nav">
           <ul class="header__nav-list" id="header__nav-list--pc">
@@ -72,7 +71,7 @@
             <li class="header__nav-item"><a href="#!">Sale 50%</a></li>
           </ul>
         </nav>
-        <!-- search -->
+        <!-- search pc -->
         <div class="header__search">
           <input
             type="search"
@@ -91,7 +90,7 @@
             </svg>
           </label>
         </div>
-        <!-- header icon search -->
+        <!-- icon search mobile -->
         <div class="header__icon-search">
           <input
             type="checkbox"
@@ -122,7 +121,7 @@
             </label>
           </div>
         </div>
-        <!-- actions -->
+        <!-- header actions -->
         <div class="header__actions">
           <button class="header__action-btn btn--primary">
             <svg
@@ -149,28 +148,43 @@
         </div>
       </div>
     </header>
-    <!-- Main -->
+    <!-- slider -->
     <div class="slider">
       <div class="container-slider">
         <div class="slider-image-list">
-          <a href="#!"
-            ><img
+          <picture>
+            <source
+              srcset="assets/img/banner-mb.jpg"
+              media="(max-width: 426px)"
+            />
+            <img
               src="assets/img/banner-pc.jpg"
               alt="seal"
-              class="slider-item__img"
-          /></a>
-          <a href="#!"
-            ><img
+              class="slider-item"
+            />
+          </picture>
+          <picture>
+            <source
+              srcset="assets/img/banner-mb(1).jpg"
+              media="(max-width: 426px)"
+            />
+            <img
               src="assets/img/banner-pc(1).jpg"
               alt="seal"
-              class="slider-item__img"
-          /></a>
-          <a href="#!"
-            ><img
+              class="slider-item"
+            />
+          </picture>
+          <picture>
+            <source
+              srcset="assets/img/banner-mb(2).jpg"
+              media="(max-width: 426px)"
+            />
+            <img
               src="assets/img/banner-pc(2).jpg"
               alt="seal"
-              class="slider-item__img"
-          /></a>
+              class="slider-item"
+            />
+          </picture>
         </div>
         <div class="slider-controls">
           <div class="btn-left btn">
@@ -182,7 +196,10 @@
         </div>
       </div>
     </div>
-    <main></main>
+    <!-- main -->
+    <main>
+      
+    </main>
   </body>
   <script src="assets/js/script.js"></script>
   <script src="assets/js/slider.js"></script>

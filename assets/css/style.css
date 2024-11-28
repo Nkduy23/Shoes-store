@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-/* html {
-  font-size: 62.5%;
-} */
-
 html {
   font-size: clamp(47%, 1.5vw, 62.5%);
 }
@@ -120,9 +116,15 @@ a {
 }
 
 /* Slider */
-.container-slider {
-  max-width: 100%;
+.slider {
+  width: 100%;
   overflow: hidden;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.container-slider {
+  display: flex;
   position: relative;
 }
 
@@ -130,16 +132,33 @@ a {
   display: flex;
 }
 
-.slider-item__img {
-  height: 80rem;
+.slider-image-list picture {
+  flex-shrink: 0; /* Đảm bảo mỗi ảnh chiếm đúng không gian của nó */
+  width: 100%; /* Mỗi ảnh sẽ chiếm toàn bộ chiều rộng slider */
+}
+
+.slider-item {
+  max-width: 100%;
+  flex-shrink: 0;
   object-fit: cover;
-  object-position: center;
+  height: auto;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .btn {
   font-size: 4rem;
   position: absolute;
   top: 50%;
+  color: #999;
 }
 
 .btn:hover {
@@ -148,16 +167,10 @@ a {
 
 .btn-left {
   left: 2rem;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #999;
 }
 
 .btn-right {
   right: 2rem;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #999;
 }
 
 /* Responsive */
