@@ -10,7 +10,6 @@ function updateSlider() {
   const width = imgs[0].offsetWidth; // Lấy chiều rộng mỗi lần cập nhật để đảm bảo tính linh hoạt
   listImage.style.transform = `translateX(${-width * current}px)`;
   listImage.style.transition = "transform 0.5s ease-in-out";
-  console.log(width);
 }
 
 // Tự động chuyển ảnh

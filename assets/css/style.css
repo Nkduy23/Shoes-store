@@ -123,7 +123,7 @@ a {
   margin-top: 1.5rem;
 }
 
-.container-slider {
+.slider-container {
   display: flex;
   position: relative;
 }
@@ -174,14 +174,141 @@ a {
 }
 
 /* main */
+main {
+  max-width: calc(100% - 4.8rem);
+  margin: 0 auto;
+}
+
+/* flash sale */
+
+.flash-sale {
+  margin: 4rem 0;
+}
+
+.flash-sale__container {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.flash-sale__title {
+  color: #f2611c;
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+.flash-sale__countdown {
+  display: flex;
+}
+
+.flash-sale__time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.5rem;
+  background-color: #262626;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  color: #ffffff;
+}
+
+/* product */
+.product-list {
+  margin: 4rem 0;
+}
+
+.product-list__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.product-list__item {
+  flex: 1 1 22%;
+  text-align: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+}
+
+.product-list__item img {
+  width: 100%;
+  transition: all 0.3s ease;
+  height: auto;
+}
+
+.product-list__item-content {
+  margin: 1rem 0;
+}
+
+.product-list__item-price {
+  color: #ed1c24;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product-list__progress {
+  width: 100%;
+  position: relative;
+}
+
+.product-list__progress-bar {
+  width: 50%;
+  background-color: #ffbda6;
+  border-radius: 1rem;
+  height: 1.9rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.product-list__progress-fill {
+  background-color: #ed1c24;
+  border-radius: 1rem;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+}
+
+.product-list__progress-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.product-list__variant-color {
+  display: flex;
+  column-gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.product-list__variant-color-item {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.product-list__variant-color-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* Responsive */
 /* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {  }
-
+@media (max-width: 575.98px) {
+}
 
 @media (min-width: 768px) {
-  .search__drawer {
+  .header__search-drawer {
     display: none;
   }
 }
@@ -202,7 +329,7 @@ a {
 
   /* overlay */
   .header__overlay,
-  .search__overlay {
+  .header__search-overlay {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.3);
     inset: 0;
@@ -212,13 +339,13 @@ a {
     transition: ease 0.3s;
   }
 
-  .menu-checkbox:checked ~ .header__overlay,
-  .search-checkbox:checked ~ .search__overlay {
+  .header__menu-checkbox:checked ~ .header__overlay,
+  .search-checkbox:checked ~ .header__search-overlay {
     opacity: 1;
     visibility: visible;
   }
 
-  .menu-drawer {
+  .header__menu-drawer {
     position: fixed;
     background-color: rgb(255, 255, 255);
     inset: 0 20% 0 0;
@@ -227,7 +354,7 @@ a {
     padding: 2rem;
   }
 
-  .search__drawer {
+  .header__search-drawer {
     position: fixed;
     background-color: rgb(255, 255, 255);
     inset: 0 0 0 20%;
@@ -239,13 +366,13 @@ a {
     align-items: center;
   }
 
-  .menu-checkbox:checked ~ .menu-drawer,
-  .search-checkbox:checked ~ .search__drawer {
+  .header__menu-checkbox:checked ~ .header__menu-drawer,
+  .search-checkbox:checked ~ .header__search-drawer {
     transform: translateX(0);
     transition: ease 0.3s;
   }
 
-  .search-checkbox:checked ~ .search__drawer .header__search-input {
+  .search-checkbox:checked ~ .header__search-drawer .header__search-input {
     display: block;
     width: 100%;
   }
@@ -272,10 +399,13 @@ a {
 }
 
 /* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {  }
+@media (max-width: 991.98px) {
+}
 
 /* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {  }
+@media (max-width: 1199.98px) {
+}
 
 /* X-Large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {  }
+@media (max-width: 1399.98px) {
+}

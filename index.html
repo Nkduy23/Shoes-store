@@ -27,7 +27,7 @@
             type="checkbox"
             name="menu-checkbox"
             id="menu-checkbox"
-            class="menu-checkbox"
+            class="header__menu-checkbox"
             hidden
           />
           <!-- overlay -->
@@ -35,7 +35,7 @@
           <label for="menu-checkbox" class="header__overlay"></label>
 
           <!-- menu content -->
-          <div class="menu-drawer">
+          <div class="header__menu-drawer">
             <!-- menu top -->
             <div class="menu-drawer__top">
               <div class="header__logo">
@@ -99,10 +99,10 @@
             class="search-checkbox"
             hidden
           />
-          <label for="search-checkbox" class="search__overlay"></label>
+          <label for="search-checkbox" class="header__search-overlay"></label>
 
           <!-- search content -->
-          <div class="search__drawer">
+          <div class="header__search-drawer">
             <input
               type="search"
               class="header__search-input"
@@ -150,7 +150,7 @@
     </header>
     <!-- slider -->
     <div class="slider">
-      <div class="container-slider">
+      <div class="slider__container">
         <div class="slider-image-list">
           <picture>
             <source
@@ -198,9 +198,234 @@
     </div>
     <!-- main -->
     <main>
-      
+      <!-- fash sale -->
+      <div class="flash-sale">
+        <div class="flash-sale__container">
+          <!-- text -->
+          <div class="flash-sale__text">
+            <a href="#!">
+              <h2 class="flash-sale__title">
+                F<i class="fa-solid fa-bolt-lightning"></i>lash Sale
+              </h2>
+            </a>
+          </div>
+          <!-- countdown -->
+          <div class="flash-sale__countdown">
+            <div class="flash-sale__time-box">
+              <span id="days">00</span>
+            </div>
+            <div class="flash-sale__time-box">
+              <span id="hours">00</span>
+            </div>
+            <div class="flash-sale__time-box">
+              <span id="minutes">00</span>
+            </div>
+            <div class="flash-sale__time-box">
+              <span id="seconds">00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- product list -->
+      <div class="product-list">
+        <div class="product-list__container">
+          <!-- product item -->
+          <div class="product-list__item" id="product-1">
+            <a href="#!">
+              <!-- img -->
+              <img
+                id="main-product-image-1"
+                src="assets/img/mwc(3).jpg"
+                alt="product"
+              />
+              <!-- content -->
+              <div class="product-list__item-content">
+                <p class="product-list__item-price">1.000.000đ</p>
+              </div>
+              <!-- progress -->
+              <div class="product-list__progress">
+                <div class="product-list__progress-bar">
+                  <div class="product-list__progress-fill"></div>
+                  <!-- Thanh tiến độ -->
+                </div>
+                <div class="product-list__progress-info">
+                  <span class="product-list__progress-text">Đã bán</span>
+                  <span class="product-list__progress-counter">0</span>
+                </div>
+              </div>
+              <!-- variant color -->
+              <div class="product-list__variant-color">
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3).jpg"
+                >
+                  <img src="assets/img/mwc(4).jpg" alt="color white" />
+                </span>
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3.1).jpg"
+                >
+                  <img src="assets/img/mwc(5).jpg" alt="color yellow" />
+                </span>
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3.2).jpg"
+                >
+                  <img src="assets/img/mwc(6).jpg" alt="color black" />
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <!-- product item -->
+          <div class="product-list__item" id="product-2">
+            <a href="#!">
+              <!-- img -->
+              <img
+                id="main-product-image-2"
+                src="assets/img/mwc(3).jpg"
+                alt="product"
+              />
+              <!-- content -->
+              <div class="product-list__item-content">
+                <p class="product-list__item-price">1.000.000đ</p>
+              </div>
+              <!-- progress -->
+              <div class="product-list__progress">
+                <div class="product-list__progress-bar">
+                  <div class="product-list__progress-fill"></div>
+                  <!-- Thanh tiến độ -->
+                </div>
+                <div class="product-list__progress-info">
+                  <span class="product-list__progress-text">Đã bán</span>
+                  <span class="product-list__progress-counter">0</span>
+                </div>
+              </div>
+              <!-- variant color -->
+              <div class="product-list__variant-color">
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3).jpg"
+                >
+                  <img src="assets/img/mwc(4).jpg" alt="color white" />
+                </span>
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3.1).jpg"
+                >
+                  <img src="assets/img/mwc(5).jpg" alt="color yellow" />
+                </span>
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3.2).jpg"
+                >
+                  <img src="assets/img/mwc(6).jpg" alt="color black" />
+                </span>
+              </div>
+            </a>
+          </div>
+          <!-- product item -->
+          <div class="product-list__item" id="product-3">
+            <a href="#!">
+              <!-- img -->
+              <img
+                id="main-product-image-3"
+                src="assets/img/mwc(3).jpg"
+                alt="product"
+              />
+              <!-- content -->
+              <div class="product-list__item-content">
+                <p class="product-list__item-price">1.000.000đ</p>
+              </div>
+              <!-- progress -->
+              <div class="product-list__progress">
+                <div class="product-list__progress-bar">
+                  <div class="product-list__progress-fill"></div>
+                  <!-- Thanh tiến độ -->
+                </div>
+                <div class="product-list__progress-info">
+                  <span class="product-list__progress-text">Đã bán</span>
+                  <span class="product-list__progress-counter">0</span>
+                </div>
+              </div>
+              <!-- variant color -->
+              <div class="product-list__variant-color">
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3).jpg"
+                >
+                  <img src="assets/img/mwc(4).jpg" alt="color white" />
+                </span>
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3.1).jpg"
+                >
+                  <img src="assets/img/mwc(5).jpg" alt="color yellow" />
+                </span>
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3.2).jpg"
+                >
+                  <img src="assets/img/mwc(6).jpg" alt="color black" />
+                </span>
+              </div>
+            </a>
+          </div>
+          <!-- product item -->
+          <div class="product-list__item" id="product-4">
+            <a href="#!">
+              <!-- img -->
+              <img
+                id="main-product-image-4"
+                src="assets/img/mwc(3).jpg"
+                alt="product"
+              />
+              <!-- content -->
+              <div class="product-list__item-content">
+                <p class="product-list__item-price">1.000.000đ</p>
+              </div>
+              <!-- progress -->
+              <div class="product-list__progress">
+                <div class="product-list__progress-bar">
+                  <div class="product-list__progress-fill"></div>
+                  <!-- Thanh tiến độ -->
+                </div>
+                <div class="product-list__progress-info">
+                  <span class="product-list__progress-text">Đã bán</span>
+                  <span class="product-list__progress-counter">0</span>
+                </div>
+              </div>
+              <!-- variant color -->
+              <div class="product-list__variant-color">
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3).jpg"
+                >
+                  <img src="assets/img/mwc(4).jpg" alt="color white" />
+                </span>
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3.1).jpg"
+                >
+                  <img src="assets/img/mwc(5).jpg" alt="color yellow" />
+                </span>
+                <span
+                  class="product-list__variant-color-item"
+                  data-image="assets/img/mwc(3.2).jpg"
+                >
+                  <img src="assets/img/mwc(6).jpg" alt="color black" />
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
   <script src="assets/js/script.js"></script>
   <script src="assets/js/slider.js"></script>
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/progress.js"></script>
+  <script src="assets/js/variantcolor.js"></script>
 </html>
