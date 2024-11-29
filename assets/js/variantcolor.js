@@ -15,11 +15,13 @@ productItems.forEach(item => {
     colorItem.addEventListener('mouseover', function() {
       const newImage = colorItem.getAttribute('data-image');
       mainProductImage.src = newImage;
+      colorItem.classList.add('active-variant');
     });
 
     colorItem.addEventListener('mouseout', function() {
-      const defaultImage = 'assets/img/mwc(3).jpg'; // Thay đổi đường dẫn hình mặc định nếu cần
+      const defaultImage = colorItem.getAttribute('data-image');
       mainProductImage.src = defaultImage;
+      colorItem.classList.remove('active-variant');
     });
   });
 });
