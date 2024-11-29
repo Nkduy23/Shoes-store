@@ -24,6 +24,10 @@ const progressData = [
   { sold: 24, max: 100 },
   { sold: 12, max: 100 },
   { sold: 30, max: 100 },
+  { sold: 12, max: 100 },
+  { sold: 45, max: 100 },
+  { sold: 88, max: 100 },
+  { sold: 14, max: 100 },
 ];
 
 const progressElements = document.querySelectorAll(".product-list__progress");
