@@ -17,7 +17,7 @@ a {
 }
 
 /* Header */
-.header {
+.header.header--sticky {
   position: sticky;
   top: -1.5rem;
   z-index: 2;
@@ -394,9 +394,14 @@ main {
 }
 
 @media (max-width: 767.98px) {
-  html {
+
+}
+
+
+@media (max-width: 991.98px) {
+  /* html {
     font-size: clamp(50%, 2vw, 70%);
-  }
+  } */
 
   /* Header */
   .header__menu-icon {
