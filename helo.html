@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+  </head>
+  <body>
+    <!-- Sản phẩm bán chạy -->
+    <div class="product-list" id="best-sellers">
+      <div class="product-list__header">
+        <h2 class="product-list__header-title">Sản Phẩm Bán Chạy</h2>
+      </div>
+      <div class="product-list__container"></div>
+    </div>
+
+    <!-- Giày Cao Gót Nữ -->
+    <div class="product-list" id="high-heels-women">
+      <div class="product-list__header">
+        <h2 class="product-list__header-title">Giày Cao Gót Nữ</h2>
+      </div>
+      <div class="product-list__container"></div>
+    </div>
+
+    <!-- Balo Thời Trang -->
+    <div class="product-list" id="fashion-backpacks">
+      <div class="product-list__header">
+        <h2 class="product-list__header-title">Balo Thời Trang</h2>
+      </div>
+      <div class="product-list__container"></div>
+    </div>
+
+    <!-- Các danh mục khác -->
+    <div class="product-list" id="women-sandals">
+      <div class="product-list__header">
+        <h2 class="product-list__header-title">Dép Và Sandal Nữ</h2>
+      </div>
+      <div class="product-list__container"></div>
+    </div>
+
+    <div class="product-list" id="men-sandals">
+      <div class="product-list__header">
+        <h2 class="product-list__header-title">Sandal Và Dép Nam</h2>
+      </div>
+      <div class="product-list__container"></div>
+    </div>
+
+    <div class="product-list" id="men-fashion-shoes">
+      <div class="product-list__header">
+        <h2 class="product-list__header-title">Giày Nam Thời Trang</h2>
+      </div>
+      <div class="product-list__container"></div>
+    </div>
+
+    <script>
+      const productData = [
+        {
+          id: "product-1",
+          image: "assets/img/mwc(18).jpg",
+          category: "Sản Phẩm Bán Chạy",
+          isSale: true,
+          saleTag: "GIẢM 30%",
+          price: "2.000.000đ",
+          sold: 45,
+          total: 100,
+          variants: [
+            {
+              color: "white",
+              image: "assets/img/mwc13.jpg",
+              hoverImage: "assets/img/mwc(18).jpg",
+            },
+            {
+              color: "yellow",
+              image: "assets/img/mwc5.jpg",
+              hoverImage: "assets/img/mwc(18.1).jpg",
+            },
+          ],
+        },
+        {
+          id: "product-1",
+          image: "assets/img/mwc(18).jpg",
+          category: "Giày Cao Gót Nữ",
+          isSale: true,
+          saleTag: "GIẢM 30%",
+          price: "2.000.000đ",
+          sold: 45,
+          total: 100,
+          variants: [
+            {
+              color: "white",
+              image: "assets/img/mwc13.jpg",
+              hoverImage: "assets/img/mwc(18).jpg",
+            },
+            {
+              color: "yellow",
+              image: "assets/img/mwc5.jpg",
+              hoverImage: "assets/img/mwc(18.1).jpg",
+            },
+          ],
+        },
+        {
+          id: "product-2",
+          image: "assets/img/mwc(18).jpg",
+
+          category: "Balo Thời Trang",
+          isSale: false,
+          saleTag: "",
+          price: "3.000.000đ",
+          sold: 30,
+          total: 100,
+          variants: [
+            {
+              color: "blue",
+              image: "assets/img/mwc14.jpg",
+              hoverImage: "assets/img/mwc(19).jpg",
+            },
+            {
+              color: "green",
+              image: "assets/img/mwc7.jpg",
+              hoverImage: "assets/img/mwc(19.1).jpg",
+            },
+          ],
+        },
+        {
+          id: "product-3",
+          image: "assets/img/mwc(18).jpg",
+          category: "Sandal Và Dép Nam",
+          isSale: false,
+          saleTag: "",
+          price: "1.500.000đ",
+          sold: 15,
+          total: 100,
+          variants: [
+            {
+              color: "black",
+              image: "assets/img/mwc16.jpg",
+              hoverImage: "assets/img/mwc(20).jpg",
+            },
+          ],
+        },
+        // Thêm các sản phẩm khác
+      ];
+
+      const productLists = {
+        "Sản Phẩm Bán Chạy": document.querySelector(
+          "#best-sellers .product-list__container"
+        ),
+        "Giày Cao Gót Nữ": document.querySelector(
+          "#high-heels-women .product-list__container"
+        ),
+        "Balo Thời Trang": document.querySelector(
+          "#fashion-backpacks .product-list__container"
+        ),
+        "Dép Và Sandal Nữ": document.querySelector(
+          "#women-sandals .product-list__container"
+        ),
+        "Sandal Và Dép Nam": document.querySelector(
+          "#men-sandals .product-list__container"
+        ),
+        "Giày Nam Thời Trang": document.querySelector(
+          "#men-fashion-shoes .product-list__container"
+        ),
+      };
+
+      const fragment = document.createDocumentFragment();
+
+      productData.forEach((product) => {
+        const productItem = document.createElement("div");
+        productItem.classList.add("product-list__item");
+        productItem.id = product.id;
+
+        productItem.innerHTML = `
+    <a href="#!">
+      <img 
+        id="main-product-image-${product.id.split("-")[1]}" 
+        src="${product.image}" 
+        alt="product" 
+      />
+      ${
+        product.isSale
+          ? `
+        <div class="product-list__tag">
+          <span class="product-list__tag-inner">${product.saleTag}</span>
+        </div>
+      `
+          : ""
+      }
+      <div class="product-list__item-content">
+        ${
+          product.isSale
+            ? `<p class="product-list__item-price">${product.price}</p>`
+            : `
+          <p class="product-list__item-name">${product.name || "Sản phẩm"}</p>
+          <p class="product-list__item-price product-list__item-price--color-black">
+            ${product.price}
+          </p>
+          `
+        }
+      </div>
+      <div class="product-list__variant-color">
+        ${product.variants
+          .map(
+            (variant) => `
+          <span 
+            class="product-list__variant-color-item" 
+            data-image="${variant.hoverImage}"
+          >
+            <img 
+              src="${variant.image}" 
+              alt="color ${variant.color}" 
+            />
+          </span>
+        `
+          )
+          .join("")}
+      </div>
+    </a>
+  `;
+
+        // Thêm sản phẩm vào đúng danh mục
+        const category = product.category;
+        if (productLists[category]) {
+          productLists[category].appendChild(productItem);
+        }
+      });
+    </script>
+  </body>
+</html>

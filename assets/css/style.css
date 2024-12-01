@@ -387,7 +387,7 @@ main {
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
   .product-list__item {
-    flex: 1 1 48%; /* 2 sản phẩm mỗi dòng */
+    flex: 1 1 44%;
   }
 }
 
@@ -499,6 +499,6 @@ main {
 
 @media (max-width: 374.98px) {
   .product-list__item {
-    flex: 1 1 100%; /* 1 sản phẩm mỗi dòng */
+    flex: 1 1 100%;
   }
 }
