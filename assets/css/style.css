@@ -219,6 +219,7 @@ main {
 }
 
 /* product */
+
 .product-list {
   margin: 4rem 0;
   padding: 4rem 0;
@@ -233,11 +234,17 @@ main {
   padding: 0 0 4rem 0;
 }
 
-.product-list__container {
+.product-list__container, .product-list-sale__container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
+
+/* .product-list-sale__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+} */
 
 .product-list__item {
   flex: 1 1 22%;

@@ -6,6 +6,8 @@ function updateProgressBar(progressElement, soldQuantity, maxQuantity) {
     ".product-list__progress-counter"
   );
 
+  console.log(progressFill);  
+
   // Tính toán tỷ lệ phần trăm dựa trên số lượng đã bán và số lượng tối đa
   const percentage = (soldQuantity / maxQuantity) * 100;
   const validPercentage = Math.min(percentage, 100); // Đảm bảo giá trị phần trăm không vượt quá 100%
@@ -24,6 +26,7 @@ const progressData = [
   { sold: 24, max: 100 },
   { sold: 12, max: 100 },
   { sold: 30, max: 100 },
+  { sold: 33, max: 100 }, // nó
   { sold: 12, max: 100 },
   { sold: 45, max: 100 },
   { sold: 88, max: 100 },

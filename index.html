@@ -14,8 +14,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     />
+    <!-- style -->
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Liên kết CSS của Slick Slider -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- Liên kết jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body style="height: 10000px">
     <!-- Header -->
@@ -227,201 +242,9 @@
         </div>
       </div>
       <!-- product list sale -->
-      <div class="product-list">
-        <div class="product-list__container">
-          <!-- product item 1 -->
-          <div class="product-list__item" id="product-1">
-            <a href="#!">
-              <!-- img -->
-              <img
-                id="main-product-image-1"
-                src="assets/img/mwc(3).jpg"
-                alt="product"
-              />
-              <!-- tag sale inner img -->
-              <div class="product-list__tag">
-                <span class="product-list__tag-inner">GIẢM 30%</span>
-              </div>
-              <!-- content -->
-              <div class="product-list__item-content">
-                <p class="product-list__item-price">1.000.000đ</p>
-              </div>
-              <!-- progress -->
-              <div class="product-list__progress">
-                <div class="product-list__progress-bar">
-                  <div class="product-list__progress-fill"></div>
-                  <!-- Thanh tiến độ -->
-                </div>
-                <div class="product-list__progress-info">
-                  <span class="product-list__progress-text">Đã bán</span>
-                  <span class="product-list__progress-counter">0</span>
-                </div>
-              </div>
-              <!-- variant color -->
-              <div class="product-list__variant-color">
-                <span
-                  class="product-list__variant-color-item"
-                  data-image="assets/img/mwc(3).jpg"
-                >
-                  <img src="assets/img/mwc4.jpg" alt="color white" />
-                </span>
-                <span
-                  class="product-list__variant-color-item"
-                  data-image="assets/img/mwc(3.1).jpg"
-                >
-                  <img src="assets/img/mwc5.jpg" alt="color yellow" />
-                </span>
-                <span
-                  class="product-list__variant-color-item"
-                  data-image="assets/img/mwc(3.2).jpg"
-                >
-                  <img src="assets/img/mwc6.jpg" alt="color black" />
-                </span>
-              </div>
-            </a>
-          </div>
-
-          <!-- product item 2 -->
-          <div class="product-list__item" id="product-2">
-            <a href="#!">
-              <!-- img -->
-              <img
-                id="main-product-image-2"
-                src="assets/img/mwc(7).jpg"
-                alt="product"
-              />
-              <!-- tag sale inner img -->
-              <div class="product-list__tag">
-                <span class="product-list__tag-inner">GIẢM 25%</span>
-              </div>
-              <!-- content -->
-              <div class="product-list__item-content">
-                <p class="product-list__item-price">1.000.000đ</p>
-              </div>
-              <!-- progress -->
-              <div class="product-list__progress">
-                <div class="product-list__progress-bar">
-                  <div class="product-list__progress-fill"></div>
-                  <!-- Thanh tiến độ -->
-                </div>
-                <div class="product-list__progress-info">
-                  <span class="product-list__progress-text">Đã bán</span>
-                  <span class="product-list__progress-counter">0</span>
-                </div>
-              </div>
-              <!-- variant color -->
-              <div class="product-list__variant-color">
-                <span
-                  class="product-list__variant-color-item"
-                  data-image="assets/img/mwc(7).jpg"
-                >
-                  <img src="assets/img/mwc5.jpg" alt="color yellow" />
-                </span>
-                <span
-                  class="product-list__variant-color-item"
-                  data-image="assets/img/mwc(7.1).jpg"
-                >
-                  <img src="assets/img/mwc6.jpg" alt="color black" />
-                </span>
-              </div>
-            </a>
-          </div>
-          <!-- product item 3 -->
-          <div class="product-list__item" id="product-3">
-            <a href="#!">
-              <!-- img -->
-              <img
-                id="main-product-image-3"
-                src="assets/img/mwc(8).jpg"
-                alt="product"
-              />
-              <!-- tag sale inner img -->
-              <div class="product-list__tag">
-                <span class="product-list__tag-inner">GIẢM 42%</span>
-              </div>
-              <!-- content -->
-              <div class="product-list__item-content">
-                <p class="product-list__item-price">1.000.000đ</p>
-              </div>
-              <!-- progress -->
-              <div class="product-list__progress">
-                <div class="product-list__progress-bar">
-                  <div class="product-list__progress-fill"></div>
-                  <!-- Thanh tiến độ -->
-                </div>
-                <div class="product-list__progress-info">
-                  <span class="product-list__progress-text">Đã bán</span>
-                  <span class="product-list__progress-counter">0</span>
-                </div>
-              </div>
-              <!-- variant color -->
-              <div class="product-list__variant-color">
-                <span
-                  class="product-list__variant-color-item"
-                  data-image="assets/img/mwc(8).jpg"
-                >
-                  <img src="assets/img/mwc10.jpg" alt="color yellow" />
-                </span>
-                <span
-                  class="product-list__variant-color-item"
-                  data-image="assets/img/mwc(8.1).jpg"
-                >
-                  <img src="assets/img/mwc9.jpg" alt="color white" />
-                </span>
-                <span
-                  class="product-list__variant-color-item"
-                  data-image="assets/img/mwc(8.2).jpg"
-                >
-                  <img src="assets/img/mwc6.jpg" alt="color black" />
-                </span>
-              </div>
-            </a>
-          </div>
-          <!-- product item 4 -->
-          <div class="product-list__item" id="product-4">
-            <a href="#!">
-              <!-- img -->
-              <img
-                id="main-product-image-4"
-                src="assets/img/mwc(11).jpg"
-                alt="product"
-              />
-              <!-- tag sale inner img -->
-              <div class="product-list__tag">
-                <span class="product-list__tag-inner">GIẢM 30%</span>
-              </div>
-              <!-- content -->
-              <div class="product-list__item-content">
-                <p class="product-list__item-price">1.000.000đ</p>
-              </div>
-              <!-- progress -->
-              <div class="product-list__progress">
-                <div class="product-list__progress-bar">
-                  <div class="product-list__progress-fill"></div>
-                  <!-- Thanh tiến độ -->
-                </div>
-                <div class="product-list__progress-info">
-                  <span class="product-list__progress-text">Đã bán</span>
-                  <span class="product-list__progress-counter">0</span>
-                </div>
-              </div>
-              <!-- variant color -->
-              <div class="product-list__variant-color">
-                <span
-                  class="product-list__variant-color-item"
-                  data-image="assets/img/mwc(11).jpg"
-                >
-                  <img src="assets/img/mwc9.jpg" alt="color white" />
-                </span>
-                <span
-                  class="product-list__variant-color-item"
-                  data-image="assets/img/mwc(11.1).jpg"
-                >
-                  <img src="assets/img/mwc10.jpg" alt="color yellow" />
-                </span>
-              </div>
-            </a>
-          </div>
+      <div class="product-list-sale">
+        <div class="product-list-sale__container">
+        
         </div>
         <div class="product-list__view-more">
           <a href="#!">Xem thêm</a>
@@ -1968,10 +1791,15 @@
         </div>
       </div>
     </main>
+    <!-- Liên kết JavaScript của Slick Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Mã JavaScript của bạn để khởi tạo Slick Slider -->
+    <script src="assets/js/slickslider.js"></script>
+    <script src="assets/js/script.js"></script>
+    
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/productsale.js"></script>
+    <!-- <script src="assets/js/progress.js"></script> -->
+    <!-- <script src="assets/js/variantcolor.js"></script> -->
   </body>
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/slider.js"></script>
-  <script src="assets/js/countdown.js"></script>
-  <script src="assets/js/progress.js"></script>
-  <script src="assets/js/variantcolor.js"></script>
 </html>
